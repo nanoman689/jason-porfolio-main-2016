@@ -1,0 +1,25 @@
+################
+##IGNORE ME!!!##
+################
+
+*gem
+*swp
+.DS_store
+.sass-cache
+_site
+
+Gemfile.lock
+npm-debug.log
+
+tmp/
+
+Gemfile.lock
+public
+tmp
+
+contrib/*.css
+
+node_modules
+
+scss/bourbon
+scss/neat
