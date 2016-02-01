@@ -28,7 +28,7 @@ gulp.task('watch', function() {
 
 // Gulp Sass Task 
 gulp.task('sass', function() {
-  gulp.src('./scss/**/*.{scss,sass}')
+  gulp.src('site/scss/**/*.{scss,sass}')
     // Initializes sourcemaps
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -38,7 +38,7 @@ gulp.task('sass', function() {
     // Writes sourcemaps into the CSS file
   
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('site/css'));
 })
 
 /* old Gulp SASS 
@@ -59,11 +59,8 @@ gulp.task('html', function() {
     .pipe(gulp.dest('build/'));
 });
 
-/* browserify not be like working and stuf 
-
-// JavaScript build task, removes whitespace and concatenates all files
 gulp.task('scripts', function() {
-  return browserify('site/js/*.js').
+  return browserify('site/js/app.js')
     .bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
@@ -71,12 +68,10 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('build/js'));
 });
 
-*/
-
 // Styles build task, concatenates all the files
 gulp.task('styles', function() {
   return gulp.src('site/css/*.css')
-    .pipe(concat('styles.css'))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('build/css'));
 });
 
