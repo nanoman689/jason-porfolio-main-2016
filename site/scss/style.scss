@@ -102,6 +102,8 @@
   }
 
   ul li.nav-link {
+    
+    
     background: $centered-navigation-background;
     display: block;
     line-height: $centered-navigation-height;
@@ -112,6 +114,8 @@
     z-index: 9999;
 
     a {
+        font-family: 'Droid Serif', serif;
+        
       color: $centered-navigation-color;
       display: inline-block;
       outline: none;
@@ -286,7 +290,15 @@
   }
 
   .images-wrapper {
+    /*
+      
     @include background(url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
+      
+    */
+      
+      @include background(url("img/top_image.png"), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);  
+      
+      
     background-color: $side-image-background-top;
     background-size: cover;
     border-bottom: $side-image-border;
@@ -312,10 +324,12 @@
     }
 
     h1 {
+      font-family: 'Lobster', cursive;    
       margin-bottom: 0.9em;
     }
 
     h4 {
+      font-family: 'Droid Serif', serif;
       background: #BBB;
       color: white;
       display: inline-block;
@@ -326,10 +340,27 @@
     }
 
     p {
+      font-family: 'Droid Serif', serif;
       color: $base-font-color;
       line-height: $base-line-height;
       margin-bottom: 3em;
     }
+    
+    li {
+        font-family: 'Droid Serif', serif;
+        font-weight: 400;
+        
+        text-decoration: none;
+        list-style: none;
+        padding-right: 1em;    
+          
+      }  
+      
+    ul > .li-head {
+
+        font-family: 'Droid Serif', serif;
+        font-weight: 700;
+      }
   }
 
   @include reset-display();
@@ -417,10 +448,11 @@
 }
 
 .card {
+  $gutter: modular-scale(1, 1em, $golden) !default;    
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
-  $base-spacing: 1.5em !default;
+  $base-spacing: 0.25em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
@@ -428,11 +460,11 @@
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10%);
   $card-header-background: $card-background;
-  $card-margin: 1em;
+  $card-margin: 0em;
   $card-image-hover-opacity: 0.7;
-  $card-image-hover-color: #F8F2B4;
+  $card-image-hover-color: #819FF7;   
 
-  @include flex-basis(15em);
+  @include flex-basis(16em);
   @include flex-grow(1);
   @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
@@ -459,8 +491,11 @@
     }
   }
 
-  .card-header {
+  .card-header {  
     @include transition (all 0.2s ease-in-out);
+    
+      font-family: 'Lobster', cursive; 
+    
     background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
@@ -469,13 +504,14 @@
     padding: ($base-spacing / 3) ($base-spacing / 2);
   }
 
-  .card-copy {
+  .card-copy { 
+    font-family: 'Droid Serif', serif;  
     font-size: 0.9em;
     line-height: 1.5em;
     padding: ($base-spacing / 2) ($base-spacing / 2);
 
     p {
-      margin: 0 0 ($base-spacing / 2);
+        margin: 0 0 ($base-spacing / 2);
     }
   }
 
@@ -568,6 +604,8 @@
   }
 
   ul li {
+    font-family: 'Droid Serif', serif;
+      
     list-style: none;
     padding-right: 1em;
 
@@ -578,6 +616,7 @@
   }
 
   ul li a {
+      
     color: $footer-link-color;
     text-decoration: none;
 
