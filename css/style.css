@@ -1,0 +1,38 @@
+body{
+    padding: 0em;
+}
+
+li {
+    display: inline;
+}
+.main-nav {
+    margin: 0em;
+    padding: 0.25em;
+    background: grey;
+}
+
+.top{
+    margin: 0em;
+    padding: 0.5em;
+    background: #D8D8D8;
+}
+
+.wrapper {
+    margin: 0em;
+    padding: 0em;
+}
+
+.SideBar {
+    margin: 0em;
+    padding: 0.5em;
+    background: #848484;
+}
+
+footer {
+    padding: 0.5em;
+    background: #0B615E;
+}
+
+img {
+    margin: 0em;
+}
