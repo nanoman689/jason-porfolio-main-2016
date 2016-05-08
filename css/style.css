@@ -1,3 +1,5 @@
+/* main events */
+
 body{
     padding: 0em;
 }
@@ -5,6 +7,18 @@ body{
 li {
     display: inline;
 }
+
+footer {
+    padding: 0.5em;
+    background: #0B615E;
+}
+
+img {
+    margin: 0em;
+}
+
+/* classes being now */
+
 .main-nav {
     margin: 0em;
     padding: 0.25em;
@@ -28,11 +42,41 @@ li {
     background: #848484;
 }
 
-footer {
-    padding: 0.5em;
-    background: #0B615E;
+/* reset grids */
+
+.row, 
+.column {
+    box-sizing: border-box;
 }
 
-img {
-    margin: 0em;
+/* clear floats*/ 
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+/* grid layout starts! */
+
+.column {
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.column + .column {
+    margin-left: 0;
+}
+
+.column-3 {
+    width: 23.8%;
+}
+
+.column-9 {
+    width: 74.6%;
 }
