@@ -1,82 +1,67 @@
-/* main events */
+/* make it all box model*/
 
-body{
-    padding: 0em;
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+/* Main Events */
 
 li {
-    display: inline;
+  display: inline;
 }
 
-footer {
-    padding: 0.5em;
-    background: #0B615E;
+.top {
+  padding: 10px;
 }
 
-img {
-    margin: 0em;
+/* Here be the grids */
+
+.page-wrap {
+  width: 80%;
+  margin: 30px auto;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* classes being now */
-
-.main-nav {
-    margin: 0em;
-    padding: 0.25em;
-    background: grey;
+.grid {
+  overflow: hidden;
+  padding-left: 10px; 
+  float:left
 }
 
-.top{
-    margin: 0em;
-    padding: 0.5em;
-    background: #D8D8D8;
+.grid .col {
+  padding-right: 10px;   
 }
 
-.wrapper {
-    margin: 0em;
-    padding: 0em;
+.grid .col-2-3 {
+  float: left;  
+  width: 70%;
+  height: 400px;    
 }
 
-.SideBar {
-    margin: 0em;
-    padding: 0.5em;
-    background: #848484;
+.grid .col-1-3 {
+  float: left;
+  width: 30%;
+  height: 400px;    
+
 }
 
-/* reset grids */
+/* inner text styles */
 
-.row, 
-.column {
-    box-sizing: border-box;
+a:link {
+  text-decoration: none;
+  padding: 5px;
+}
+.module {
+  padding: 20px;
+  background: #FAFAFA;
 }
 
-/* clear floats*/ 
-
-.row:before,
-.row:after {
-    content: " ";
-    display: table;
+.module-info {
+  font-style: italic;
 }
 
-.row:after {
-    clear: both;
-}
-
-/* grid layout starts! */
-
-.column {
-    position: relative;
-    float: left;
-    display: block;
-}
-
-.column + .column {
-    margin-left: 0;
-}
-
-.column-3 {
-    width: 23.8%;
-}
-
-.column-9 {
-    width: 74.6%;
+.module-link {
+  text-indent: 20px;
 }
