@@ -84,11 +84,13 @@ p {
 }
 
 .module-text {
+  border-top:dotted 1px; 
+  padding-top:1em;    
   font-family: 'Muli', sans-serif;
   font-weight: 300;
 }
 
-.module-info{
+.module-info{   
   font-family: 'Muli', sans-serif;
   font-weight: 400;
 }
