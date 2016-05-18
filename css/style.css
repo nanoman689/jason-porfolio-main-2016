@@ -55,7 +55,7 @@ a:link {
 }
 .module {
   padding: 20px;
-  background: #FAFAFA;
+  background: #BDBDBD;
 }
 
 .module-info {
@@ -64,4 +64,36 @@ a:link {
 
 .module-link {
   text-indent: 20px;
+}
+
+/* Awww yeah Fonts */
+
+h1 {
+  font-family: 'Ovo', serif;
+  font-weight: 400;    
+}
+
+h2 {
+  font-family: 'Ovo', serif;
+  font-weight: 400;  
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;    
+}
+
+.module-text {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+}
+
+.module-info{
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;    
 }
