@@ -1,6 +1,7 @@
 $(document).ready(function() {
-    $('.twoBox .col-1-3').height($('.twoBox .col-2-3').height())
-
+    /*
+    $('.twoBox .col-2-3').height($('.twoBox .col-1-3').height())
+    */
     
     $('.aButton').click(function(){
         $("div").show("slow");
