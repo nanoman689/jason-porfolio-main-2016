@@ -22,7 +22,7 @@ $(document).ready(function(){
 
         		if(jQuery.isNumeric(userNumber)) {
         			$.get('http://numbersapi.com/' + userNumber + '/trivia?notfound=floor&fragment', function(data) {
-    					$( "p" ).text(data);   
+    					$( "h4" ).text(data);   
                         newButton();
                 });	
         		
@@ -44,6 +44,6 @@ $(document).ready(function(){
         console.log("reset the value");
         $('input').val("");
         $(this).parent().remove();
-        $("p").text("");
+        $("h4").text("");
     })
 });
