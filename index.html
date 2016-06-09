@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Ovo" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,500italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic,300italic,300,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     
@@ -19,53 +19,23 @@
 </head>
 
 <header class="main-nav">
+
     <nav role="navigation">
       <ul id="navigation-menu" class="navigation-menu">
-         <li class="nav-link logo">
-          <a href="javascript:void(0)" class="logo">
-            <img src="img/jasonlikestocode_v2.png">
-          </a>
+        <li class="nav-link logo">
+          <a class="logo"><img src="img/jasonlikestocode_v2.png"></a>
         </li>
-        <li class="nav-link"><a href="#about">About Me</a></li>
-        <li class="nav-link"><a href="#projects">Projects</a></li>
-        <li class="nav-link"><a href="#contactMe" id="clickMe" class="aButton">Contact</a></li>
+        <li><h1>Jason Thomas - Front End Developer</h1></li>
+        <li class="nav-link"><a href="#contact" id="clickMe" class="aButton">Contact</a></li>
       </ul>
     </nav>     
 </header>
- 
-<br> 
-   
+  
 <div id="about" class="top">
-     <h1>Jason Thomas - Front End Developer</h1>
     <p>Hello, for the past two years I have been learning front end development and this is my personal site. I have basic knowledge Javascript, CSS, Angular, and HTML. Take a look at my<a href="https://github.com/nanoman689">GitHub</a>repository if you want to see some of the projects I have been working on.
 </p>       
         <p>I decided to make a career change a while back and I wanted a new challenge and had been wanting to get back into programming and web production. My personal background is in print production, using Photoshop, Illustrator and InDesign. I have a degree in graphic design and one in film production. I have over a decade of experience in the various fields of graphics and print arts. I'm a animation and visual effects fan at heart and still like to create small projects on the side.
         </p>
-</div>
-
-<div id="myContact" style="display:none" class="contactBox">
-    <span class="close">x</span>
-    <div id="wufoo-mzj84wq0lizzid">
-    Fill out my <a href="https://nanoman689.wufoo.com/forms/mzj84wq0lizzid">online form</a>.
-    </div>
-    <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">The easy to use <a href="http://www.wufoo.com/form-builder/">Wufoo form builder</a> helps you make forms easy, fast, and fun.</div>
-    <a href="#contactDone" id="clickDone" class="bButton">Close</a>
-    <script type="text/javascript">var mzj84wq0lizzid;(function(d, t) {
-    var s = d.createElement(t), options = {
-    'userName':'nanoman689',
-    'formHash':'mzj84wq0lizzid',
-    'autoResize':true,
-    'height':'517',
-    'async':true,
-    'host':'wufoo.com',
-    'header':'show',
-    'ssl':true};
-    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-    s.onload = s.onreadystatechange = function() {
-    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-    try { mzj84wq0lizzid = new WufooForm();mzj84wq0lizzid.initialize(options);mzj84wq0lizzid.display(); } catch (e) {}};
-    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-    })(document, 'script');</script>
 </div>
 
 <div id="projects" class="grid"> 
@@ -80,7 +50,7 @@
            <div class="module"> 
             <h2>Jaybird Photo Gallery</h2>
                <div class="module-text">
-                My final project for my Front End Development class was to take an existing API and do something creative with it. In this project I took the Flickr API and set it so you can log in and look at your own images with a gallery I built. You can also look at some preset galleries if you don't want to log in.    
+                In this project I took the Flickr API and set it so you can log in and look at your own images with a gallery I built. You can also look at some preset galleries if you don't want to log in.    
                 </div>
                 <br>
                 <div class="module-info">
@@ -196,8 +166,12 @@
     <div>
         <ul>
             <li><a href="https://github.com/nanoman689">GitHub</a></li>  
-            <li><a href="https://twitter.com/nanoman689">Twitter</a></li>   
+            <li><a href="https://twitter.com/nanoman689">Twitter</a></li>
+            <li><a id="contact" href="mailto:jason@jasonlikestocode.com?Subject=Hello%Jason" target="_top" id="clickMe" class="aButton">Contact</a></li> 
+            
         </ul>
+        <h2>jason@jasonlikestocode.com</h2>
+        
     </div>
     
 </footer>
