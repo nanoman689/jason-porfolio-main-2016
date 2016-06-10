@@ -17,12 +17,13 @@ $(document).ready(function(){
 		var keycode = (event.keyCode ? event.keyCode : event.which);
     		if(keycode == '13'){
         		var userNumber = $(this).val();
+                event.preventDefault();
 
                 /*--- Check to see if it's a number and if so, use the numbersAPI---*/
 
         		if(jQuery.isNumeric(userNumber)) {
         			$.get('http://numbersapi.com/' + userNumber + '/trivia?notfound=floor&fragment', function(data) {
-    					$( "h4" ).text(data);   
+    					$( "h4" ).text(data); 
                         newButton();
                 });	
         		
