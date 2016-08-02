@@ -106,7 +106,19 @@ a#clickDone {
 input#userNumber {
   padding: 5px;
   margin: 10px;
+  height: 35px;
+  font-weight: 400;
+  font-size:1.1em; 
 }
+
+button {
+  height: 35px;
+  width: 80px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size:1.1em;    
+}
+
 /* Here be the grids */
 
 .page-wrap {

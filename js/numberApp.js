@@ -10,34 +10,28 @@ $(document).ready(function(){
         $('input').off();
     }
 
-
 	/*--- Get user input ---*/
 
-	$('input').keypress(function (event){
-		var keycode = (event.keyCode ? event.keyCode : event.which);
-    		if(keycode == '13'){
-        		var userNumber = $(this).val();
-                event.preventDefault();
-
+	$('form').submit(function (event){
+        event.preventDefault();
+		var numberGuess = $('input[name="userNumber"]').val();
+    		if(numberGuess > 999 && numberGuess < 9999){
+                console.log(numberGuess);
                 /*--- Check to see if it's a number and if so, use the numbersAPI---*/
-
-        		if(jQuery.isNumeric(userNumber)) {
-        			$.get('http://numbersapi.com/' + userNumber + '/trivia?notfound=floor&fragment', function(data) {
+        		if(jQuery.isNumeric(numberGuess)) {
+        			$.get('http://numbersapi.com/' + numberGuess + '/trivia?notfound=floor&fragment', function(data) {
     					$( "h4" ).text(data); 
                         newButton();
                 });	
-        		
                 /*--- Alert if it's not a number ---*/    
-
                 } else {
         			alert("That's not a number!");
-                    newButton();
-                
         		}
-
-	  		return false;
-    	}
-  	});
+            return false;
+    	} else {
+            alert("Pick a four digit number!");
+        }  
+    });
 
     /*--- reset button ---*/
 
