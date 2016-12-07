@@ -1,8 +1,6 @@
 /* make it all box model*/
 
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;    
@@ -63,10 +61,13 @@ nav {
   min-width: 650px;    
   left:50%;
   top:50%;
-  backface-visibility: hidden;    
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;        
   height: auto;
   overflow:hidden;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   background-color: #F3F3F3;    
 }
 
@@ -95,7 +96,7 @@ a#clickDone {
   width: 650px;    
 }
 .number {
-  float: left;
+  
   width: 940px;    
   padding: 10px;
   border-radius: 10px 0px 10px 0px;   
@@ -176,14 +177,22 @@ a:link {
 }
 
 .col-2-3 {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   border-radius: 10px 0px 10px 0px; 
 }
 
 .col.col-2-3 img {
-  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   width: 460px;
   height: 375px;     
 }
@@ -268,11 +277,110 @@ button.btn {
   font-weight: 500;
 }
 
+button.resetButton {
+    height: 35px;
+    width: 280px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size:1.1em;
+    color:#2085a3;
+}
 
 /* Media Screen Stuff */
 
-@media (max-width: 799px) {
+@media (min-width: 300px) and (max-width: 449px){
+ 
+    .twoBox {
+        display: inline-table;
+    }
     
+    .grid {
+        width: 320px;
+    }
+    
+    h1 {
+        font-size: 1.0em;
+    }
+    
+    h2 {
+        font-size: 1.0em;
+        padding: 5px;
+    }
+    
+    h4 {
+        padding: 5px;
+    }
+    
+    p {
+        width: 296px;
+        padding: 5px;
+        font-size: 0.8em;
+    }
+    
+    ul#navigation-menu {   
+      width: 320px;
+    }
+    
+    .module {
+        width: 320px;
+        height: 310px;
+    }
+    
+    .module-text,
+    .module-info,
+    .module-link {
+        padding: 5px;
+    }
+    
+    .grid .col-1-3 {
+        height: 310px;
+    }
+    
+    .col.col-2-3 img {
+        width: 320px;
+        height: 120px;
+    }
+    
+    .grid .col-2-3 {
+        width: 320px;
+        height: 120px;
+    }
+    
+    .largeScreen {
+        display: none;
+    }
+    
+    .smScreen {
+        display: block;
+    }
+    
+    .top {
+        width: 320px;
+    }
+    
+    .number {
+        margin-top: 10px;
+        width: 320px;
+    }
+    
+    footer {
+        width: 320px;
+    }
+    
+    button.btn {
+        padding: 5px;
+    }
+    
+    button {
+        width: 185px;
+    }
+    
+}
+
+
+
+@media (min-width: 450px) and (max-width: 799px){
+
     .clearfix {
       overflow: auto;
     }
@@ -331,10 +439,13 @@ button.btn {
       min-width: 650px;    
       left:50%;
       top:50%;
-      backface-visibility: hidden;    
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;  
       height: 750px;
       overflow:hidden;
-      transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+          -ms-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
       background-color: #F3F3F3;    
     }
     
@@ -351,7 +462,9 @@ button.btn {
     }
     
     .col.col-2-3 img {
-      flex-shrink: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
       width: 750px;
       height: 120px;    
     }
@@ -418,11 +531,9 @@ button.btn {
     
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1024px) {
+@media (min-width: 800px) and (max-width: 1024px) {
 
     * {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin: 0;
       padding: 0;    
@@ -462,7 +573,9 @@ button.btn {
 
     .col.col-2-3 img {
       clear:left;    
-      flex-shrink: 0;
+      -webkit-flex-shrink: 0;    
+          -ms-flex-negative: 0;    
+              flex-shrink: 0;
       width: 375px;
       height: 315px;     
     }
@@ -523,8 +636,6 @@ button.btn {
 
 @media (min-device-width: 1200px) {
     * {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin: 0;
       padding: 0;    
@@ -536,15 +647,13 @@ button.btn {
       margin: 10px;
       font-weight: 300;
       line-height: 20px;
-      width: 1200px;
       margin: 0 auto; 
       margin-bottom: 10px;    
     }
     
     ul#navigation-menu {
       border-radius: 10px 0px 10px 0px;
-      margin-bottom: 10px;    
-      width: 1200px;
+      margin-bottom: 10px;
       margin: 0 auto;
       margin-bottom: 10px;    
       text-align: center;
@@ -553,8 +662,7 @@ button.btn {
     
     .grid {
       overflow: hidden;
-      margin: 0 auto;
-      width:1200px;    
+      margin: 0 auto;  
     }
 
     .twoBox {
@@ -563,15 +671,15 @@ button.btn {
     
     .col.col-2-3 img {
       clear:left;    
-      flex-shrink: 0;
-      width: 290px;
+      -webkit-flex-shrink: 0;    
+          -ms-flex-negative: 0;    
+              flex-shrink: 0;
       height: 410px;     
     }
     
     .grid .col-2-3 {
       border-radius: 10px 0px 10px 0px;    
       float:left;
-      width: 300px;
       height: 405px;
       padding-right: 5px;
     }
@@ -587,7 +695,6 @@ button.btn {
       position: relative;
       background: #F3F3F3;
       border-radius: 10px 0px 10px 0px;
-      width: 295px;
       height: 405px;    
     }
 
@@ -610,17 +717,18 @@ button.btn {
       padding: 10px;    
     }
     
-    .number {
-      width: 1200px;    
+    .number {   
       padding: 10px;
       border-radius: 10px 0px 10px 0px;    
       background: #F3F3F3;
-      text-align: center;  
+      text-align: center;
+      margin: 0 auto;
+      clear: both;
+      clear: left;
     }
         
     footer {
       border-radius: 10px 0px 10px 0px;     
-      width: 1200px;
       margin: 0 auto;
     }
 }

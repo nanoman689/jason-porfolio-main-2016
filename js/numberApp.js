@@ -4,10 +4,12 @@ $(document).ready(function(){
 
     var newButton = function (){    
         var li = $('<li>', {class:"item", html:""});
-        var btn = $("<button>", {class:"btn", html:"Enter a new number"});
+        var btn = $("<button>", {class:"resetButton", html:"Enter a new number"});
         li.append(btn);
         $(".resetButton").append(li);
         $('input').off();
+        $('input').prop( "disabled", true );
+        $('button.submitButton').prop( "disabled", true );
     }
 
 	/*--- Get user input ---*/
@@ -40,5 +42,7 @@ $(document).ready(function(){
         $('input').val("");
         $(this).parent().remove();
         $("h4").text("");
+        $('input').prop( "disabled", false );
+        $('button.submitButton').prop( "disabled", false );
     })
 });
